@@ -30,5 +30,6 @@ plt.ylabel("Relative flux")
 plt.title("Transit Light Curve for HD 209458 b")
 # plt.legend()
 # plt.xlim(-0.14, 0.14)
-plt.savefig("HD_209458_b__assignment1_taskF.png") 
+plt.savefig("assignment2_taskA.png") 
+
 plt.close()
