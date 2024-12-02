@@ -1,0 +1,35 @@
+Report on SVM Kernels (Linear, Gaussian, Polynomial) for Kepler Data
+----------------------------------------------------
+
+Kernel: linear
+Precision - Train Set: 0.5624139964615688
+Precision - Dev Set: 0.5543859649122806
+Confusion Matrix - Train Set:
+[[   0 2226]
+ [   0 2861]]
+Confusion Matrix - Dev Set:
+[[  0 254]
+ [  0 316]]
+----------------------------------------------------
+
+Kernel: rbf
+Precision - Train Set: 0.5653296266878475
+Precision - Dev Set: 0.5543859649122806
+Confusion Matrix - Train Set:
+[[  37 2189]
+ [  14 2847]]
+Confusion Matrix - Dev Set:
+[[  0 254]
+ [  0 316]]
+----------------------------------------------------
+
+Kernel: poly
+Precision - Train Set: 0.5687980574666127
+Precision - Dev Set: 0.5597345132743363
+Confusion Matrix - Train Set:
+[[  95 2131]
+ [  50 2811]]
+Confusion Matrix - Dev Set:
+[[ 55 199]
+ [ 63 253]]
+----------------------------------------------------
