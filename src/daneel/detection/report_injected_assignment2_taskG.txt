@@ -1,0 +1,13 @@
+Report on Neural Network for Kepler Data
+----------------------------------------------------
+
+Model: NN Model
+Precision - Train Set: 0.7025264873675632
+Precision - Dev Set: 0.20833333333333334
+Confusion Matrix - Train Set:
+[[524 365]
+ [ 27 862]]
+Confusion Matrix - Dev Set:
+[[ 27 133]
+ [  5  35]]
+----------------------------------------------------
