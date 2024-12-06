@@ -1,0 +1,67 @@
+[Global]
+xsec_path = /ca24/AstroCode-Collective/atmosphere/xsecs
+cia_path = /ca24/AstroCode-Collective/atmosphere/cia/hitran
+
+[Chemistry]
+chemistry_type = taurex
+fill_gases = H2, He
+ratio = 0.25
+
+    [[H2O]]
+    gas_type = constant
+    mix_ratio = 1.1185e-4  # Replace with a valid random value
+
+    [[CH4]]
+    gas_type = constant
+    mix_ratio = 1e-5  # Example; replace with a random value in range
+
+    [[CO2]]
+    gas_type = constant
+    mix_ratio = 5e-6  # Example; replace with a random value in range
+
+   [[CO]]
+    gas_type = constant
+    mix_ratio = 2e-5  # Example; replace with a random value in range
+
+[Temperature]
+profile_type = isothermal
+T = 1200  # Adjusted for Task A
+
+[Pressure]
+profile_type = Simple
+atm_min_pressure = 1e-4  # Increased resolution for lower pressures
+atm_max_pressure = 1e6
+nlayers = 30  # Reduced to optimize memory usage
+
+[Planet]
+planet_type = Simple
+planet_mass = 0.69  # Adjusted mass in Jupiter masses
+planet_radius = 1.39  # Slight adjustment to planet radius
+planet_sma = 10.21  # From params1
+orbital_period = 3.52  # From params1
+
+[Star]
+star_type = blackbody
+temperature = 5800  # Adjusted based on a typical G-type star
+
+[Model]
+model_type = transmission
+
+    [[Absorption]]
+
+    [[CIA]]
+    cia_pairs = H2-H2, H2-He
+
+    [[Rayleigh]]
+
+[Binning]
+bin_type = manual
+accurate = False
+wavelength_res = 0.6, 2.5, 30  # Adjusted range to optimize computation
+
+[Observation]
+taurex_spectrum = self
+
+[Instrument]
+instrument = snr
+SNR = 20
