@@ -165,3 +165,7 @@ data_no_injection
 data_injected
 atmosphere
 Simple_Transmission.h5
+spectra.csv
+download_spectra.sh
+
+HD_209458_b_3.11218_5413_51.tbl
