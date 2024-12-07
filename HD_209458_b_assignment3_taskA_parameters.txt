@@ -1,0 +1,17 @@
+
+Planetary Parameters:
+- Planet Name: HD 209458 b
+- Atmospheric Composition: H2O, CH4, CO2, CO (randomized abundances [10^-8, 10^-2])
+- Planetary Radius: 1.36 R_J
+- Semi-major Axis: 0.047 AU
+- Temperature: 1400 K
+
+Stellar Parameters:
+- Stellar Radius: 1.146 R_sun
+- Stellar Temperature: 6091 K
+- Stellar Luminosity: 1.62 L_sun
+
+TauREx Simulation Details:
+- Forward Model: Transmission Spectrum
+- Wavelength Range: 0.3 - 5 microns
+- Resolution: 300
