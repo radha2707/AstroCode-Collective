@@ -10,7 +10,7 @@ ratio = 0.25
 
     [[H2O]]
     gas_type = constant
-    mix_ratio = 1e-4  # Adjust for Task A
+    mix_ratio = 1e-4  # Adjust to a random value in range [1e-8, 1e-2]
 
     [[CH4]]
     gas_type = constant
@@ -18,26 +18,28 @@ ratio = 0.25
 
     [[CO2]]
     gas_type = constant
-    mix_ratio = 1e-6
+    mix_ratio = 1e-6  # Added CO2
 
     [[CO]]
     gas_type = constant
-    mix_ratio = 5e-6
+    mix_ratio = 5e-6  # Added CO
 
 [Temperature]
 profile_type = isothermal
-T = 1200  # Aligned with Task A
+T = 1200  # Updated to reflect Task A's value
 
 [Pressure]
 profile_type = Simple
 atm_min_pressure = 1e-4
 atm_max_pressure = 1e6
-nlayers = 50  # Optimized for computational needs
+nlayers = 50  # Balanced for retrieval
 
 [Planet]
 planet_type = Simple
-planet_mass = 0.69  # Updated mass from Task A
+planet_mass = 0.69  # Updated as per Task A's synthetic planet
 planet_radius = 1.39
+planet_sma = 10.21
+orbital_period = 3.52
 
 [Star]
 star_type = blackbody
@@ -53,12 +55,9 @@ model_type = transmission
 
     [[Rayleigh]]
 
-[Observation]
-observed_spectrum = /ca24/AstroCode-Collective/src/daneel/detection/quickstart.dat
-
 [Optimizer]
 optimizer = nestle
-num_live_points = 150
+num_live_points = 150  # Enhanced accuracy
 method = single
 
 [Fitting]
