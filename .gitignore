@@ -164,7 +164,7 @@ cython_debug/
 data_no_injection
 data_injected
 atmosphere
-Simple_Transmission.h5
+Simple_transmission_forward.h5
 spectra.csv
 download_spectra.sh
 Simple_Transmission_retrieval.h5
