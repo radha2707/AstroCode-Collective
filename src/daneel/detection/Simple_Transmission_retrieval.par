@@ -10,19 +10,19 @@ ratio = 0.25
 
     [[H2O]]
     gas_type = constant
-    mix_ratio = 1e-4  # Adjust for Task A
+    mix_ratio = 1.1185e-4  # Replace with a valid random value
 
     [[CH4]]
     gas_type = constant
-    mix_ratio = 2e-5  # Added CH4 for consistency
+    mix_ratio = 1e-5  # Example; replace with a random value in range
 
     [[CO2]]
     gas_type = constant
-    mix_ratio = 1e-6
+    mix_ratio = 5e-6  # Example; replace with a random value in range
 
-    [[CO]]
+   [[CO]]
     gas_type = constant
-    mix_ratio = 5e-6
+    mix_ratio = 2e-5  # Example; replace with a random value in range
 
 [Temperature]
 profile_type = isothermal
@@ -30,18 +30,18 @@ T = 1200  # Aligned with Task A
 
 [Pressure]
 profile_type = Simple
-atm_min_pressure = 1e-4
+atm_min_pressure = 1e-0
 atm_max_pressure = 1e6
-nlayers = 50  # Optimized for computational needs
+nlayers = 100  # Optimized for computational needs
 
 [Planet]
 planet_type = Simple
-planet_mass = 0.69  # Updated mass from Task A
+planet_mass = 0.73  # Updated mass from Task A
 planet_radius = 1.39
 
 [Star]
 star_type = blackbody
-temperature = 5800
+temperature = 6050
 
 [Model]
 model_type = transmission
@@ -54,12 +54,13 @@ model_type = transmission
     [[Rayleigh]]
 
 [Observation]
-observed_spectrum = /ca24/AstroCode-Collective/src/daneel/detection/quickstart.dat
+observed_spectrum = /ca24/AstroCode-Collective/HD_209458_b_assignment3_taskA_spectrum_updated.dat
 
 [Optimizer]
-optimizer = nestle
-num_live_points = 150
-method = single
+optimizer = multinest #nestle
+num_live_points = 50
+multi_nest_path = /ca24/PyMultiNest/MultiNest/lib
+#method = multinest    #single
 
 [Fitting]
 planet_radius:fit = True
@@ -69,4 +70,4 @@ T:fit = True
 T:bounds = 300, 2000
 
 H2O:fit = True
-H2O:bounds = 1e-12, 1e-1
+H2O:bounds = 1e-6, 1e-3    #1e-12, 1e-1
