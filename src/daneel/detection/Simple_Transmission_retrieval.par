@@ -57,10 +57,10 @@ model_type = transmission
 observed_spectrum = /ca24/AstroCode-Collective/HD_209458_b_assignment3_taskA_spectrum_updated.dat
 
 [Optimizer]
-optimizer = multinest #nestle
+optimizer = nestle
 num_live_points = 50
-multi_nest_path = /ca24/PyMultiNest/MultiNest/lib
-#method = multinest    #single
+#multi_nest_path = /ca24/PyMultiNest/MultiNest/lib
+method = single
 
 [Fitting]
 planet_radius:fit = True
@@ -70,4 +70,4 @@ T:fit = True
 T:bounds = 300, 2000
 
 H2O:fit = True
-H2O:bounds = 1e-6, 1e-3    #1e-12, 1e-1
+H2O:bounds = 1e-12, 1e-1    #1e-12, 1e-1
