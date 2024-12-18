@@ -1,0 +1,89 @@
+[Global]
+xsec_path = /ca24/AstroCode-Collective/atmosphere/xsecs
+cia_path = /ca24/AstroCode-Collective/atmosphere/cia/hitran
+
+
+[Chemistry]
+chemistry_type = taurex
+fill_gases = H2, He
+ratio = 0.25
+
+    [[H2O]]
+    gas_type = constant
+    mix_ratio = 3.5e-4  # Replace with a valid random value
+
+    [[CH4]]
+    gas_type = constant
+    mix_ratio = 1e-6  
+
+    [[CO2]]
+    gas_type = constant
+    mix_ratio = 1.8e-4  
+
+   [[HCN]]
+    gas_type = constant
+    mix_ratio = 8e-6  
+
+    [[C2H2]]
+    gas_type = constant
+    mix_ratio = 2e-6  
+
+[Temperature]
+profile_type = isothermal
+T = 1088  
+
+[Pressure]
+profile_type = Simple
+atm_min_pressure = 1e-0
+atm_max_pressure = 1e6
+nlayers = 100  # Optimized for computational needs
+
+[Planet]
+planet_type = Simple
+planet_mass = 0.69  # Updated mass from Task A
+planet_radius = 1.35
+
+[Star]
+star_type = blackbody
+temperature = 6050
+
+[Model]
+model_type = transmission
+
+    [[Absorption]]
+
+    [[CIA]]
+    cia_pairs = H2-H2, H2-He
+
+    [[Rayleigh]]
+
+[Observation]
+observed_spectrum = /ca24/AstroCode-Collective/HD_209458_b_spectrum_assignment3_taskB.dat
+
+[Optimizer]
+optimizer = MultiNest #nestle
+num_live_points = 50
+multi_nest_path = /ca24/PyMultiNest/MultiNest/lib
+#method = single
+
+[Fitting]
+planet_radius:fit = True
+planet_radius:bounds = 1.32, 1.38
+
+T:fit = True
+T:bounds = 900, 1200
+
+H2O:fit = True
+H2O:bounds = 2e-5, 4e-4    
+
+CO2:fit = True
+CO2:bounds = 2e-5, 4e-4
+
+CH4:fit = False
+CH4:bounds = 1e-8, 1e-5  # Keep fixed as per paper's constraints
+
+HCN:fit = False
+HCN:bounds = 1e-8, 1e-5  # Keep fixed as per paper's constraints
+
+C2H2:fit = False
+C2H2:bounds = 1e-8, 1e-5  # Keep fixed as per paper's constraints
