@@ -2,16 +2,16 @@
 Planet Name: HD 209458 b
 Article Name: Xue et al. 2024
 
+
 Star Parameters:
 - Host Star: HD 209458
-- Stellar Radius: 1.19 ± 0.02 R_sun
-- Effective Temperature: ~6091 K
+- Effective Temperature: 6050 K # this parameter is not mentioned in the paper.
 
 Planet Parameters:
-- Planetary Radius: 1.396 ± 0.023 R_J
-- Transit Depth: 1.45346% - 1.46972%
-- Semi-major Axis: ~0.047 AU
-- Orbital Period: ~3.524 days
+- Planetary Radius: 1.35  +0.006 -0.007 R_J
+- Semi-major Axis: ~8.84 +0.02 -0.02
+- Orbital Period: ~3.52474859 days
+- Temperature: 1088 +103 -88 K
 
 Atmospheric Composition:
 - Primary Components: H2O, CO2, CO, CH4
