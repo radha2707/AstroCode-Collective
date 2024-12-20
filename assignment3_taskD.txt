@@ -1,0 +1,15 @@
+Input Parameters:
+H2O: 1.5e-3
+CH4: 1.0e-8 (fixed)
+CO2: 7.0e-4
+HCN: 1.0e-8 (fixed)
+C2H2: 1.0e-8 (fixed)
+T: 1088 K
+Radius: 1.35 Rj
+
+
+Retrieved Parameters:
+H2O: 4.20e-02 +7.10e-03 -8.52e-03
+CO2: 5.58e-06 +3.94e-06 -4.03e-06
+Temperature: 709.01 +46.21 -36.34 K
+Planet Radius: 1.3810 +0.0017 -0.0027 Rj
