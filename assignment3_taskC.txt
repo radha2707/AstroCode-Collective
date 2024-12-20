@@ -1,0 +1,12 @@
+Input Parameters:
+H2O: 1.1185e-4
+CH4: 1.0e-5
+CO2: 5.0e-6
+CO: 2.0e-5
+T: 1200 K
+Radius: 1.39 Rj
+
+Retrieved Parameters:
+H2O: 1.07e-4 +2.16e-6 -2.61e-6
+Temperature: 1200.01 +0.01 -0.01 K
+Planet Radius: 1.391 +0.0001 -0.0001 Rj
